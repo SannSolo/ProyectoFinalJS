@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "nombre": "pantalon sabri",
+        "precio": 8900,
+        "stock": 5,
+        "talle": "unico",
+        "imagen": "./img/modelo_1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "bluson urban escote v",
+        "precio": 7000,
+        "stock": 3,
+        "talle": "unico",
+        "imagen": "./img/modelo_2.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "pollera pantalon momo",
+        "precio": 6900,
+        "stock": 0,
+        "talle": "s",
+        "imagen": "./img/modelo_3.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "solero japon",
+        "precio": 8600,
+        "stock": 6,
+        "talle": "m",
+        "imagen": "./img/modelo_4.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "vestido rectangulo",
+        "precio": 7580,
+        "stock": 4,
+        "talle": "unico",
+        "imagen": "./img/modelo_5.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "bluson urban bote",
+        "precio": 2900,
+        "stock": 0,
+        "talle": "s",
+        "imagen": "./img/modelo_6.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "chaqueta mirta",
+        "precio": 1900,
+        "stock": 1,
+        "talle": "m",
+        "imagen": "./img/modelo_7.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "saco vasco",
+        "precio": 6900,
+        "stock": 2,
+        "talle": "unico",
+        "imagen": "./img/modelo_8.jpg"
+    }
+]
