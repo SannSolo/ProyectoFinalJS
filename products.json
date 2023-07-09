@@ -5,7 +5,8 @@
         "precio": 8900,
         "stock": 5,
         "talle": "unico",
-        "imagen": "./img/modelo_1.jpg"
+        "imagen": "./img/modelo_1.jpg",
+        "enCarrito": 0
     },
     {
         "id": 2,
@@ -13,7 +14,9 @@
         "precio": 7000,
         "stock": 3,
         "talle": "unico",
-        "imagen": "./img/modelo_2.jpg"
+        "imagen": "./img/modelo_2.jpg",
+        "enCarrito": 0
+        
     },
     {
         "id": 3,
@@ -21,7 +24,8 @@
         "precio": 6900,
         "stock": 0,
         "talle": "s",
-        "imagen": "./img/modelo_3.jpg"
+        "imagen": "./img/modelo_3.jpg",
+        "enCarrito": 0
     },
     {
         "id": 4,
@@ -29,7 +33,8 @@
         "precio": 8600,
         "stock": 6,
         "talle": "m",
-        "imagen": "./img/modelo_4.jpg"
+        "imagen": "./img/modelo_4.jpg",
+        "enCarrito": 0
     },
     {
         "id": 5,
@@ -37,7 +42,8 @@
         "precio": 7580,
         "stock": 4,
         "talle": "unico",
-        "imagen": "./img/modelo_5.jpg"
+        "imagen": "./img/modelo_5.jpg",
+        "enCarrito": 0
     },
     {
         "id": 6,
@@ -45,7 +51,8 @@
         "precio": 2900,
         "stock": 0,
         "talle": "s",
-        "imagen": "./img/modelo_6.jpg"
+        "imagen": "./img/modelo_6.jpg",
+        "enCarrito": 0
     },
     {
         "id": 7,
@@ -53,7 +60,8 @@
         "precio": 1900,
         "stock": 1,
         "talle": "m",
-        "imagen": "./img/modelo_7.jpg"
+        "imagen": "./img/modelo_7.jpg",
+        "enCarrito": 0
     },
     {
         "id": 8,
@@ -61,6 +69,7 @@
         "precio": 6900,
         "stock": 2,
         "talle": "unico",
-        "imagen": "./img/modelo_8.jpg"
+        "imagen": "./img/modelo_8.jpg",
+        "enCarrito": 0
     }
 ]

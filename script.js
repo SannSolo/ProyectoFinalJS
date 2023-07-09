@@ -1,21 +1,15 @@
+let productosCarrito = [];
 
 async function mostrarProductos() {
   try {
     let contenedorProductos = document.getElementById("prendas");
-  
-    console.log(prendas);
-  
     const response = await fetch('products.json');
     const data = await response.json();
-  
-    console.log(data);
-  
+
     data.forEach((prenda) => {
-      console.log(prenda);
-  
       let contenedor = document.createElement("div");
       contenedor.classList.add("container-fluid");
-  
+
       contenedor.innerHTML = `
         <div class="card">
           <img class="card-img-top" style="width:400px" src="${prenda.imagen}" alt="Card image">
@@ -23,12 +17,23 @@ async function mostrarProductos() {
             <h4 class="card-title">${prenda.nombre}</h4> 
             <h3 class="card-text">$${prenda.precio}</h3>
             <p class="card-text">talle ${prenda.talle}</p>
-            <button type="button" id="agregar-al-carrito" class="btn btn-primary">Agregar al carrito</button>
+            <button type="button" id="${prenda.id}" class="btn btn-primary">Agregar al carrito</button>
           </div>
         </div>
       `;
-  
+
       contenedorProductos.appendChild(contenedor);
+    });
+
+    let botonesAgregar = document.querySelectorAll(".btn-primary");
+
+    botonesAgregar.forEach((boton) => {
+      boton.addEventListener('click', function(e) {
+        const id = e.currentTarget.id;
+        console.log("click en producto", id);
+        let producto = data.find(p => p.id === parseInt(id));
+        agregarAlCarrito(producto);
+      });
     });
   } catch (error) {
     console.log(error);
@@ -37,44 +42,35 @@ async function mostrarProductos() {
 
 mostrarProductos();
 
-
-
-let botonesAgregar = document.querySelectorAll(".btn-primary")
-
-botonesAgregar.forEach((boton) => {
-    boton.addEventListener("click", avisoAdd)
-})
-
-function avisoAdd() {
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Your work has been saved',
-        showConfirmButton: false,
-        timer: 1500
-      })
+function marcarBoton(id) {
+  let boton = document.getElementById(id);
+  boton.classList.add('added');
+  setTimeout(() => {
+    boton.classList.remove('added');
+  }, 1000);
 }
 
-// // let carrito = document.getElementById("prendas")
-// //     console.log(prendas.innerHTML)
+function agregarAlCarrito(producto) {
+  let productoEnCarrito = productosCarrito.find(p => p.id === producto.id);
+  if(productoEnCarrito){
+    productoEnCarrito.cantidad += 1;
+  } else {
+    producto = {...producto, cantidad: 1};
+    productosCarrito.push(producto);
+  }
+  marcarBoton(producto.id);
+  guardarCarritoEnStorage();
+}
 
+function guardarCarritoEnStorage() {
+  localStorage.setItem('carrito', JSON.stringify(productosCarrito));
+}
 
-// prendas.forEach((prenda) => console.log(prenda.nombre));
+function cargarCarritoDeStorage() {
+  let carritoGuardado = localStorage.getItem('carrito');
+  if(carritoGuardado) {
+    productosCarrito = JSON.parse(carritoGuardado);
+  }
+}
 
-// console.log("              LOS PRECIOS (en mismo orden que modelo)                      ")
-
-// prendas.forEach((prenda) => console.log(prenda.precio))
-
-// console.log("          PRODUCTOS EN STOCK              ")
-
-
-// let enStock = prendas.filter((prenda) => prenda.stock > 0)
-// console.log(enStock);
-
-// console.log("          PRODUCTOS TALLE UNICO              ")
-
-// let talleUnico = prendas.filter((prenda) => prenda.talle === "unico")
-// console.log(talleUnico)
-
-
-
+cargarCarritoDeStorage();

@@ -6,17 +6,11 @@
 @font-face{
     font-family: aileron;
     src: url(./font/Aileron/Aileron-Light.otf);
-    
 }
-
-
 
 nav{
     text-transform: uppercase;
-    
-    
 }
-
 
 .card {
     padding: 15px;
@@ -37,11 +31,10 @@ h4{
 }
 
 .container-fluid{
-    padding: 25px;
-    padding-left: 150px;
+    padding: 10px;
+    padding-left: 100px;
     background-color: #515a63;
 }
-
 
 div .btn:hover{
     color: #4e4c53;
@@ -56,13 +49,13 @@ div .btn:hover{
     padding-top: 25px;
     color: antiquewhite;
     background-color: #515a63;
-
 }
 
 .manifiesto {
     color: antiquewhite;
     background-color: #515a63;
 }
+
 .manif{
     padding: 200px;
     padding-top: 20px;
@@ -71,7 +64,6 @@ div .btn:hover{
 }
 
 .imglogo{
-    
     display: flex;
     justify-content: center;
 }
@@ -79,12 +71,41 @@ div .btn:hover{
 footer{
     height: 90px;
     background-color:#343a40d5;
-    
-
 }
 
 i{
     font-size: 50px;
     color: rgb(233, 117, 233);
-    
+}
+
+.btn-primary {
+  background-color: rgb(89, 89, 212);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgb(60, 60, 160);
+}
+
+.btn-primary.added {
+  background-color: green;
+}
+
+.btn-danger {
+    background-color: rgb(103, 0, 0);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: rgb(80, 0, 0);
 }
